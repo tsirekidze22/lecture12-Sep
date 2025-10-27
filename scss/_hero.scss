@@ -1,0 +1,15 @@
+main {
+  margin-top: 150px;
+
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
