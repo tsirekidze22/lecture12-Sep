@@ -1,0 +1,16 @@
+.tech-stack {
+  margin: 100px auto;
+  text-align: center;
+
+  .skills-list {
+    margin-top: 40px;
+    @include dFlex(space-between, center);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-list {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}

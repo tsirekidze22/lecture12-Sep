@@ -1,5 +1,6 @@
 body {
   background-color: #191919;
+  color: $primaryColor;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -7,6 +8,35 @@ body {
   max-width: 1204px;
   margin: auto;
 }
+
+// Mixins
+@mixin dFlex(
+  $justifyContent: flex-start,
+  $alignItems: stretch,
+  $columnGap: 0px
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  column-gap: $columnGap;
+}
+
+// Extends
+%card-base {
+  border-radius: 20px;
+  background-color: #363636;
+  box-shadow: 0px 0px 23px 0px rgba(194, 187, 187, 0.75);
+  -webkit-box-shadow: 0px 0px 23px 0px rgba(194, 187, 187, 0.75);
+  -moz-box-shadow: 0px 0px 23px 0px rgba(194, 187, 187, 0.75);
+}
+
+%button-base {
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+
 
 @media (max-width: 768px) {
   .container {

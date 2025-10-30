@@ -1,0 +1,15 @@
+
+.projects {
+  text-align: center;
+  margin: 120px auto;
+  .projects-list {
+    margin-top: 60px;
+    @include dFlex(space-between);
+
+    .card {
+      width: 373px;
+      height: 567px;
+      @extend %card-base;
+    }
+  }
+}
