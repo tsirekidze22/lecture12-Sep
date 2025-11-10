@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SCSS</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -50,7 +51,7 @@
       </div>
     </main>
 
-    <section class="container tech-stack">
+    <section class="container tech-stack" data-aos="fade-up">
       <h2>My Tech Stack</h2>
       <p>Technologies I’ve been working with recently</p>
 
@@ -73,7 +74,24 @@
       </ul>
     </section>
 
-    <section class="container projects" id="projects">
+    <section class="container projects" id="projects" data-aos="fade-left">
+      <h2>Projects</h2>
+      <p>Things I’ve built so far</p>
+
+      <div class="projects-list">
+        <div class="card card1">
+          <div class="img-container"></div>
+        </div>
+        <div class="card card2">
+          <div class="img-container"></div>
+        </div>
+        <div class="card card3">
+          <div class="img-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container projects" id="projects" data-aos="fade-right">
       <h2>Projects</h2>
       <p>Things I’ve built so far</p>
 
@@ -118,5 +136,19 @@
         };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 200, // values from 0 to 3000, with step 50ms
+        duration: 1200, // values from 0 to 3000, with step 50ms
+        easing: "ease-in-out", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
   </body>
 </html>
